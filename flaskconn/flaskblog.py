@@ -29,7 +29,6 @@ def listallusers():
     recent = datetime.now(tz=tz.tzlocal()) - timedelta(hours=6)
 
     person=User.query.filter(User.date >= recent).order_by(User.date).all()
-    #person=User.query.all()[::-1]
     return render_template('list_all_users.html',mypersons=person)
 
 
