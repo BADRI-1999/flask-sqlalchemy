@@ -15,7 +15,7 @@ class User(db.Model):
     name=db.Column(db.String(20),nullable=True)
     cases_failed=db.Column(db.Integer,nullable=True)
     cases_passed=db.Column(db.Integer,nullable=True)
-    date = db.Column(db.DateTime, default=datetime.utcnow())
+    date = db.Column(db.DateTime, default=datetime.now())
 
 
     def __init__(self,name,cases_failed,cases_passed):
