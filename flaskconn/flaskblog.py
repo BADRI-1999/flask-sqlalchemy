@@ -26,7 +26,7 @@ class User(db.Model):
 
 @app.route('/')
 def listallusers():
-    recent = datetime.now(tz=tz.tzlocal()) - timedelta(hours=6)
+    recent = datetime.now(tz=tz.tzlocal()) - timedelta(minutes=5)
 
     person=User.query.filter(User.date >= recent).order_by(User.date).all()
     return render_template('list_all_users.html',mypersons=person)
