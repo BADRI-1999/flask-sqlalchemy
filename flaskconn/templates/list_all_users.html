@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Project details</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
+
+
+  </head>
+
+  <body >
+<div class="center">
+    <table class="table table-hover">
+         <thead >
+            <tr>
+               <th scope="col">project Name</th>
+               <th scope="col">cases failed</th>
+               <th scope="col">cases passed</th>
+               <th scope="col">date</th>
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for data in mypersons %}
+               <tr>
+                  <td scope="row">{{ data.name }}</td>
+                  <td>{{ data.cases_failed }}</td>
+                  <td>{{ data.cases_passed }}</td>
+                  <td>{{ data.date }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+</table>
+</div>
+    </body>
+    </html>
